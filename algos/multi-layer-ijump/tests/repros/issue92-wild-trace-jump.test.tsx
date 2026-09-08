@@ -33,13 +33,7 @@ test("issue 92: off-axis goal does not need a wild mirrored jump", () => {
     <board width="16mm" height="12mm" routingDisabled>
       <Pad name="U1" pcbX={-6} pcbY={0} />
       <Pad name="U2" pcbX={6} pcbY={4} />
-      <Pad
-        name="U_obstacle"
-        pcbX={0}
-        pcbY={0}
-        width="2mm"
-        height="2mm"
-      />
+      <Pad name="U_obstacle" pcbX={0} pcbY={0} width="2mm" height="2mm" />
       <trace from=".U1 > .pin1" to=".U2 > .pin1" />
     </board>,
   )
