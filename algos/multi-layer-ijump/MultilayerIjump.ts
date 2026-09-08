@@ -489,7 +489,11 @@ export class MultilayerIjump extends GeneralizedAstarAutorouter {
             })
           }
         }
-        if (travelDir.wallDistance === Infinity) {
+        if (
+          travelDir.wallDistance === Infinity &&
+          isGoalInTravelDir &&
+          goalDistAlongTravelDir > 0
+        ) {
           travelDirs3.push({
             ...travelDir,
             travelDistance: goalDistAlongTravelDir,
